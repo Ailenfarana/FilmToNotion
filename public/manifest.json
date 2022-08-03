@@ -1,0 +1,16 @@
+{
+    "name": "Film To Notion",
+    "description": "Extension IMDB/CHROME",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+      },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["contentscript.js"]
+    }]
+}

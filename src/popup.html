@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            width: 500px;
+            height: 500px;
+        }
+
+        #resul {
+            padding: 5px;
+        }
+
+        .d-none {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1> Archive of your log </h1>
+    <div id="resul">
+        <div class="card">
+            <p>Guardar este Fanfic ♥</p>
+            <P><span class="bold">Title:</span><span class="titulo"></span></P>
+            <P><span class="bold">Rating:</span><span class="rating"></span></P>
+            <P><span class="bold">Fandom:</span><span class="fandom"></span></P>
+            <P><span class="bold">Relationships:</span><span class="ships"></span></P>
+            <P><span class="bold">Characters:</span><span class="chars"></span></P>
+            <P><span class="bold">Tags:</span><span class="tags"></span></P>
+            <P><span class="bold">Words:</span><span class="words"></span></P>
+            <P><span class="bold">Category:</span><span class="category"></span></P>
+        </div>
+    </div>
+    <button>Agregar</button>
+    <span class="saved d-none">Guardado correctamente</span>
+    <script type="module" src="popup.js"></script>
+</body>
+</html>
