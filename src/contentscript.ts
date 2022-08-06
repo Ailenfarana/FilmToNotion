@@ -20,18 +20,11 @@ const getDescription = () => {
     return tag?.innerText ?? 'no data';
 }
 
-const getRate = () => {
-    const tag = document.querySelector('average-rating') as HTMLSpanElement;
-    return tag?.innerText ?? 'no data';
-}
-
-
-
-const getFandom = () => {
-    const tag = document.querySelectorAll('dd.fandom.tags > ul.commas > li > a.tag');
+const getCast = () => {
+    const tag = document.querySelectorAll('a.text-slug.tooltip');
     const tagsArray = Array.from(tag);
-    const fandomList = tagsArray.map((fandom) => { return fandom.textContent})
-    return fandomList ?? "no data";
+    const castList = tagsArray.map((cast) => { return cast.textContent})
+    return castList ?? "no data";
 }
 
 const getShips = () => {
@@ -63,7 +56,7 @@ const getTagsFreeform = () => {
 }
 
 const title = getTitle();
-const fandom = getFandom();
+const cast = getCast();
 const ships = getShips();
 const characters = getCharacters();
 const year = getYearMovie();
@@ -71,15 +64,14 @@ const director = getDirector();
 const category = getCategory();
 const tags = getTagsFreeform();
 const description = getDescription();
-const rate = getRate();
+
 
 const data = {
     title: title,
     Year: year, 
     Director: director,
     Description: description,
-    GeneralRate: rate,
-    fandom: fandom,
+    cast: cast,
     ships: ships,
     characters: characters,
     category: category,
