@@ -32,7 +32,8 @@ const getGenre = () => {
     const tag = document.querySelectorAll('#tab-genres > .text-sluglist > p > a.text-slug')
     const tagsArray = Array.from(tag);
     const genreList = tagsArray.map((genre) => { return genre.textContent})
-    return genreList ?? "no data";
+    const genreListReduce = genreList.slice(0,2)
+    return genreListReduce ?? "no data";
 }
 
 
@@ -48,9 +49,9 @@ const genre = getGenre();
 
 const data = {
     title: title,
-    Year: year, 
-    Director: director,
-    Description: description,
+    year: year, 
+    director: director,
+    description: description,
     cast: cast,
     genre: genre
 }
