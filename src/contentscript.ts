@@ -24,46 +24,26 @@ const getCast = () => {
     const tag = document.querySelectorAll('a.text-slug.tooltip');
     const tagsArray = Array.from(tag);
     const castList = tagsArray.map((cast) => { return cast.textContent})
-    return castList ?? "no data";
+    const castListReduce = castList.slice(0,10)
+    return castListReduce ?? "no data";
 }
 
-const getShips = () => {
-    const tag = document.querySelectorAll('dd.relationship.tags > ul.commas > li > a.tag');
+const getGenre = () => {
+    const tag = document.querySelectorAll('#tab-genres > .text-sluglist > p > a.text-slug')
     const tagsArray = Array.from(tag);
-    const shipsList = tagsArray.map((ship) => { return ship.textContent})
-    return shipsList ?? "no data";
+    const genreList = tagsArray.map((genre) => { return genre.textContent})
+    return genreList ?? "no data";
 }
 
-const getCategory = () => {
-    const tag = document.querySelectorAll('dd.category.tags > ul.commas > li > a.tag');
-    const tagsArray = Array.from(tag);
-    const categoryList = tagsArray.map((cat) => { return cat.textContent})
-    return categoryList ?? "no data";
-}
 
-const getCharacters = () => {
-    const tag = document.querySelectorAll("dd.character.tags > ul.commas > li > a.tag");
-    const tagsArray = Array.from(tag);
-    const charList = tagsArray.map((char) => { return char.textContent})
-    return charList ?? "no data";
-}
 
-const getTagsFreeform = () => {
-    const tag = document.querySelectorAll("dd.freeform.tags > ul.commas > li > a.tag");
-    const tagsArray = Array.from(tag);
-    const tagsList = tagsArray.map((tags) => { return tags.textContent})
-    return tagsList ?? "no data";
-}
 
 const title = getTitle();
 const cast = getCast();
-const ships = getShips();
-const characters = getCharacters();
 const year = getYearMovie();
 const director = getDirector();
-const category = getCategory();
-const tags = getTagsFreeform();
 const description = getDescription();
+const genre = getGenre();
 
 
 const data = {
@@ -72,10 +52,7 @@ const data = {
     Director: director,
     Description: description,
     cast: cast,
-    ships: ships,
-    characters: characters,
-    category: category,
-    tags: tags
+    genre: genre
 }
 
 console.log(data)
