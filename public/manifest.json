@@ -1,6 +1,6 @@
 {
     "name": "Film To Notion",
-    "description": "Extension IMDB/CHROME",
+    "description": "Extension Leterboxd/Notion",
     "version": "1.0",
     "manifest_version": 3,
     "background": {
